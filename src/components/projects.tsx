@@ -1,7 +1,7 @@
-import React from 'react';
-import { Card, CardBody, CardFooter, Button, Chip, Link } from '@heroui/react';
-import { Icon } from '@iconify/react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Card, CardBody, CardFooter, Button, Chip, Link } from "@heroui/react";
+import { Icon } from "@iconify/react";
+import { motion } from "framer-motion";
 import { devProfile } from "../data/devProfile";
 
 interface Project {
@@ -18,39 +18,43 @@ export const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "E-Commerce Dashboard",
-      description: "A responsive admin dashboard for e-commerce platforms with analytics, product management, and order tracking.",
-      image: "https://img.heroui.chat/image/dashboard?w=800&h=600&u=1",
-      tags: ["React", "TypeScript", "Tailwind CSS", "Chart.js"],
-      demoUrl: "#",
-      codeUrl: "#"
+      title: "Streamify",
+      description:
+        "A social app for making friends, learning languages, and communicating via chat, video calls, and screen sharing, built with Stream Chat.",
+      image: "/src/assets/streamify.png",
+      tags: ["React", "Express", "Tailwind CSS", "Stream Chat", "MongoDB"],
+      demoUrl: `${devProfile.socialLinks[0].href}/streamify`,
+      codeUrl: `${devProfile.socialLinks[0].href}/streamify`,
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A Kanban-style task management application with drag-and-drop functionality and team collaboration features.",
-      image: "https://img.heroui.chat/image/dashboard?w=800&h=600&u=2",
-      tags: ["React", "Redux", "Firebase", "Styled Components"],
-      demoUrl: "#",
-      codeUrl: "#"
+      title: "PasskeyLogin",
+      description:
+        "A secure Angular application featuring fingerprint-based authentication and a Material-UI interface.",
+      image: "/src/assets/passkey.png",
+      tags: ["Angular", "Express", "MongoDB", "Material-UI"],
+      demoUrl: "https://passkey-login-flame.vercel.app/login",
+      codeUrl: `${devProfile.socialLinks[0].href}/passkeyLogin`,
     },
     {
       id: 3,
-      title: "Fitness Tracker",
-      description: "A mobile-responsive fitness tracking application with workout plans, progress charts, and nutrition logging.",
-      image: "https://img.heroui.chat/image/dashboard?w=800&h=600&u=3",
-      tags: ["React Native", "TypeScript", "GraphQL", "MongoDB"],
-      demoUrl: "#",
-      codeUrl: "#"
+      title: "EmployeeManagement",
+      description:
+        "An Angular 19 application for managing employee data with a modern TypeScript-based architecture.",
+      image: "/src/assets/employee.png",
+      tags: ["Angular 19", "TypeScript", "GerasimAPI"],
+      demoUrl: `${devProfile.socialLinks[0].href}/EmployeeManagementAngular19`,
+      codeUrl: `${devProfile.socialLinks[0].href}/EmployeeManagementAngular19`,
     },
     {
       id: 4,
-      title: "Weather Forecast App",
-      description: "A weather application with 7-day forecasts, location-based weather data, and interactive maps.",
-      image: "https://img.heroui.chat/image/dashboard?w=800&h=600&u=4",
-      tags: ["JavaScript", "React", "Weather API", "Leaflet"],
-      demoUrl: "#",
-      codeUrl: "#"
+      title: "ExpenseTracker",
+      description:
+        "A front-end React application for tracking daily expenses with basic CRUD operations.",
+      image: "/src/assets/expenseTracker.png", 
+      tags: ["TypeScript", "React", "Vite", "Lovable"],
+      demoUrl: "https://zccottexpensetracker.vercel.app/",
+      codeUrl: `${devProfile.socialLinks[0].href}/ExpenseTracker`,
     },
   ];
 
@@ -59,14 +63,14 @@ export const Projects: React.FC = () => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
   return (
@@ -79,13 +83,15 @@ export const Projects: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My <span className="gradient-text">Projects</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            My <span className="gradient-text">Projects</span>
+          </h2>
           <p className="text-foreground-500 max-w-2xl mx-auto">
             Explore some of my recent work and personal projects.
           </p>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
           variants={container}
           initial="hidden"
@@ -98,8 +104,8 @@ export const Projects: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="flex justify-center mt-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -132,14 +138,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <Card className="project-card h-full">
       <CardBody className="p-0 overflow-hidden">
         <div className="relative">
-          <img 
-            src={project.image} 
-            alt={project.title} 
+          <img
+            src={project.image}
+            alt={project.title}
             className="w-full h-48 object-cover"
           />
           <div className="project-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity flex items-center justify-center">
             <div className="flex gap-2">
-              <Button 
+              <Button
                 as={Link}
                 href={project.demoUrl}
                 isExternal
@@ -149,7 +155,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               >
                 Live Demo
               </Button>
-              <Button 
+              <Button
                 as={Link}
                 href={project.codeUrl}
                 isExternal
@@ -163,21 +169,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </div>
           </div>
         </div>
-        
+
         <div className="p-4">
           <h3 className="text-xl font-bold mb-2">{project.title}</h3>
           <p className="text-foreground-500 mb-4">{project.description}</p>
-          
+
           <div className="flex flex-wrap gap-2">
             {project.tags.map((tag, index) => (
-              <Chip key={index} color="primary" variant="flat" size="sm">{tag}</Chip>
+              <Chip key={index} color="primary" variant="flat" size="sm">
+                {tag}
+              </Chip>
             ))}
           </div>
         </div>
       </CardBody>
-      
+
       <CardFooter className="flex justify-between">
-        <Button 
+        <Button
           as={Link}
           href={project.demoUrl}
           isExternal
@@ -188,8 +196,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         >
           Live Demo
         </Button>
-        
-        <Button 
+
+        <Button
           as={Link}
           href={project.codeUrl}
           isExternal

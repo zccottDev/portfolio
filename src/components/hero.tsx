@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { devProfile } from "../data/devProfile";
 
 export const Hero: React.FC = () => {
+
+  const img = "https://pplx-res.cloudinary.com/image/upload/v1748452563/user_uploads/29122367/cf0737e9-4afc-4898-b0be-1d18ddf99e4b/IMG-20250528-WA0016.jpg?utm_source=perplexity"
   return (
     <section id="home" className="min-h-screen flex items-center pt-16">
       <div className="section-container">
@@ -112,7 +114,7 @@ export const Hero: React.FC = () => {
           >
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-primary">
               <img
-                src="https://img.heroui.chat/image/avatar?w=400&h=400&u=1"
+                src={img ? img : "/src/assets/me.png"}
                 alt="Developer Portrait"
                 className="w-full h-full object-cover"
               />

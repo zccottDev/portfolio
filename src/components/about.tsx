@@ -3,8 +3,10 @@ import { Card, CardBody, Button, Link } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { devProfile } from "../data/devProfile";
+import { useTheme } from '@heroui/use-theme'
 
 export const About: React.FC = () => {
+  const { theme } = useTheme();
   return (
     <section id="about" className="py-16 md:py-24 bg-content2/50">
       <div className="section-container">
@@ -34,7 +36,7 @@ export const About: React.FC = () => {
             <Card className="w-full max-w-md overflow-hidden">
               <CardBody className="p-0">
                 <img
-                  src="https://img.heroui.chat/image/ai?w=600&h=800&u=2"
+                  src={theme === "dark" ? "/src/assets/dark.jpg" : "/src/assets/white.jpg"} 
                   alt="About Me"
                   className="w-full h-full object-cover aspect-[3/4]"
                 />
@@ -49,7 +51,7 @@ export const About: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col gap-4"
           >
-            <h3 className="text-2xl font-bold">{devProfile.about.head}</h3>
+            <h3 className="text-2xl font-bold">{devProfile.about.head} {theme}</h3>
 
             <p className="text-foreground-600">{devProfile.about.p1}</p>
 
