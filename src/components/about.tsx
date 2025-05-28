@@ -36,7 +36,7 @@ export const About: React.FC = () => {
             <Card className="w-full max-w-md overflow-hidden">
               <CardBody className="p-0">
                 <img
-                  src={theme === "dark" ? "/src/assets/dark.jpg" : "/src/assets/white.jpg"} 
+                  src={theme === "dark" ? "assets/dark.jpg" : "assets/white.jpg"} 
                   alt="About Me"
                   className="w-full h-full object-cover aspect-[3/4]"
                 />

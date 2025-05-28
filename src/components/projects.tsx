@@ -21,7 +21,7 @@ export const Projects: React.FC = () => {
       title: "Streamify",
       description:
         "A social app for making friends, learning languages, and communicating via chat, video calls, and screen sharing, built with Stream Chat.",
-      image: "/src/assets/streamify.png",
+      image: "assets/streamify.png",
       tags: ["React", "Express", "Tailwind CSS", "Stream Chat", "MongoDB"],
       demoUrl: `${devProfile.socialLinks[0].href}/streamify`,
       codeUrl: `${devProfile.socialLinks[0].href}/streamify`,
@@ -31,7 +31,7 @@ export const Projects: React.FC = () => {
       title: "PasskeyLogin",
       description:
         "A secure Angular application featuring fingerprint-based authentication and a Material-UI interface.",
-      image: "/src/assets/passkey.png",
+      image: "assets/passkey.png",
       tags: ["Angular", "Express", "MongoDB", "Material-UI"],
       demoUrl: "https://passkey-login-flame.vercel.app/login",
       codeUrl: `${devProfile.socialLinks[0].href}/passkeyLogin`,
@@ -41,7 +41,7 @@ export const Projects: React.FC = () => {
       title: "EmployeeManagement",
       description:
         "An Angular 19 application for managing employee data with a modern TypeScript-based architecture.",
-      image: "/src/assets/employee.png",
+      image: "assets/employee.png",
       tags: ["Angular 19", "TypeScript", "GerasimAPI"],
       demoUrl: `${devProfile.socialLinks[0].href}/EmployeeManagementAngular19`,
       codeUrl: `${devProfile.socialLinks[0].href}/EmployeeManagementAngular19`,
@@ -51,7 +51,7 @@ export const Projects: React.FC = () => {
       title: "ExpenseTracker",
       description:
         "A front-end React application for tracking daily expenses with basic CRUD operations.",
-      image: "/src/assets/expenseTracker.png", 
+      image: "assets/expenseTracker.png", 
       tags: ["TypeScript", "React", "Vite", "Lovable"],
       demoUrl: "https://zccottexpensetracker.vercel.app/",
       codeUrl: `${devProfile.socialLinks[0].href}/ExpenseTracker`,
