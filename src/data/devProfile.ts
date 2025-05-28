@@ -43,13 +43,15 @@ export const devProfile = {
     info: [
       {
         label: "Location",
-        value: "Kerala, India",
+        value: "Calicut, Kerala",
         icon: "lucide:map-pin",
+        link: "https://www.google.com/maps/place/calicut+kerala/data=!4m2!3m1!1s0x3ba65938563d4747:0x32150641ca32ecab?sa=X&ved=1t:155783&ictx=111",
       },
       {
         label: "Email",
         value: "zzccott@gmail.com",
         icon: "lucide:mail",
+        link: "mailto:zzccott@gmail.com",
       },
       {
         label: "Degree",
@@ -60,6 +62,7 @@ export const devProfile = {
         label: "Phone",
         value: "+91 7593968596",
         icon: "lucide:phone",
+        link: "tel:+917593968596",
       },
     ],
   },

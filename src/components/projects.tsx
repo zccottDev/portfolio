@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardBody, CardFooter, Button, Chip, Link } from '@heroui/react';
 import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
+import { devProfile } from "../data/devProfile";
 
 interface Project {
   id: number;
@@ -107,7 +108,7 @@ export const Projects: React.FC = () => {
         >
           <Button
             as={Link}
-            href="https://github.com"
+            href={`${devProfile.socialLinks[0].href}?tab=repositories`}
             isExternal
             color="primary"
             variant="flat"
