@@ -31,7 +31,7 @@ export const Projects: React.FC = () => {
       title: "PasskeyLogin",
       description:
         "A secure Angular application featuring fingerprint-based authentication and a Material-UI interface.",
-      image: "public/assets/passkey.png",
+      image: "assets/passkey.png",
       tags: ["Angular", "Express", "MongoDB", "Material-UI"],
       demoUrl: "https://passkey-login-flame.vercel.app/login",
       codeUrl: `${devProfile.socialLinks[0].href}/passkeyLogin`,
@@ -41,7 +41,7 @@ export const Projects: React.FC = () => {
       title: "EmployeeManagement",
       description:
         "An Angular 19 application for managing employee data with a modern TypeScript-based architecture.",
-      image: "/public/assets/employee.png",
+      image: "assets/employee.png",
       tags: ["Angular 19", "TypeScript", "GerasimAPI"],
       demoUrl: `${devProfile.socialLinks[0].href}/EmployeeManagementAngular19`,
       codeUrl: `${devProfile.socialLinks[0].href}/EmployeeManagementAngular19`,
