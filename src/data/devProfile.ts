@@ -1,7 +1,3 @@
-// heroContent.ts
-
-import { label } from "framer-motion/client";
-
 export const devProfile = {
   greeting: "Hello, I'm",
   name: "Rahul",

@@ -14,21 +14,21 @@ export const Skills: React.FC = () => {
   const frontendSkills: Skill[] = [
     { name: "HTML", icon: "logos:html-5", color: "#E34F26", level: 95 },
     { name: "CSS", icon: "logos:css-3", color: "#1572B6", level: 90 },
-    { name: "JavaScript", icon: "logos:javascript", color: "#F7DF1E", level: 92 },
-    { name: "TypeScript", icon: "logos:typescript-icon", color: "#3178C6", level: 88 },
-    { name: "React", icon: "logos:react", color: "#61DAFB", level: 90 },
-    { name: "Next.js", icon: "logos:nextjs-icon", color: "#000000", level: 85 },
-    { name: "Tailwind CSS", icon: "logos:tailwindcss-icon", color: "#06B6D4", level: 92 },
-    { name: "Sass", icon: "logos:sass", color: "#CC6699", level: 85 },
+    { name: "JavaScript", icon: "logos:javascript", color: "#F7DF1E", level: 80 },
+    { name: "TypeScript", icon: "logos:typescript-icon", color: "#3178C6", level: 80 },
+    { name: "React", icon: "logos:react", color: "#61DAFB", level: 80 },
+    { name: "Express", icon: "skill-icons:expressjs-dark", color: "#000000", level: 75 },
+    { name: "Node.js", icon: "logos:nodejs-icon", color: "#06B6D4", level: 75 },
+    { name: "Angular", icon: "logos:angular-icon", color: "#CC6699", level: 85 },
   ];
 
   const toolsSkills: Skill[] = [
     { name: "Git", icon: "logos:git-icon", color: "#F05032", level: 88 },
-    { name: "Webpack", icon: "logos:webpack", color: "#8DD6F9", level: 80 },
+    { name: "Postman", icon: "simple-icons:postman", color: "#8DD6F9", level: 80 },
     { name: "Vite", icon: "logos:vitejs", color: "#646CFF", level: 85 },
     { name: "Figma", icon: "logos:figma", color: "#F24E1E", level: 82 },
     { name: "VS Code", icon: "logos:visual-studio-code", color: "#007ACC", level: 90 },
-    { name: "Jest", icon: "logos:jest", color: "#C21325", level: 78 },
+    { name: "ESLint", icon: "logos:eslint", color: "#C21325", level: 78 },
     { name: "Docker", icon: "logos:docker-icon", color: "#2496ED", level: 75 },
     { name: "GitHub", icon: "logos:github-icon", color: "#181717", level: 88 },
   ];
