@@ -81,10 +81,11 @@ export const About: React.FC = () => {
 
               <Button
                 as={Link}
-                href="#"
+                href="assets/RahulAP.pdf"
                 variant="bordered"
                 color="primary"
                 endContent={<Icon icon="lucide:download" />}
+                download
               >
                 Download CV
               </Button>
