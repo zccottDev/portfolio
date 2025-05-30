@@ -3,7 +3,7 @@ import { Card, CardBody, Button, Link } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { devProfile } from "../data/devProfile";
-import { useTheme } from '@heroui/use-theme'
+import { useTheme } from "@heroui/use-theme";
 
 export const About: React.FC = () => {
   const { theme } = useTheme();
@@ -36,7 +36,9 @@ export const About: React.FC = () => {
             <Card className="w-full max-w-md overflow-hidden">
               <CardBody className="p-0">
                 <img
-                  src={theme === "dark" ? 'assets/dark.jpg' : 'assets/white.jpg'} 
+                  src={
+                    theme === "dark" ? "assets/dark.jpg" : "assets/white.jpg"
+                  }
                   alt="About Me"
                   className="w-full h-full object-cover aspect-[3/4]"
                 />
@@ -51,7 +53,9 @@ export const About: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col gap-4"
           >
-            <h3 className="text-2xl font-bold">{devProfile.about.head} {theme}</h3>
+            <h3 className="text-2xl font-bold">
+              {devProfile.about.head} {theme}
+            </h3>
 
             <p className="text-foreground-600">{devProfile.about.p1}</p>
 
@@ -81,11 +85,10 @@ export const About: React.FC = () => {
 
               <Button
                 as={Link}
-                href="assets/RahulAP.pdf"
+                href="https://drive.google.com/file/d/1bwL8biu7KMjQjXV84Nd3_WxeJJbzCpUU/view?usp=drivesdk"
                 variant="bordered"
                 color="primary"
                 endContent={<Icon icon="lucide:download" />}
-                download
               >
                 Download CV
               </Button>
