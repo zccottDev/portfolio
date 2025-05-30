@@ -55,7 +55,7 @@ export const About: React.FC = () => {
             className="flex flex-col gap-4"
           >
             <h3 className="text-2xl font-bold">
-              {devProfile.about.head} {theme}
+              {devProfile.about.head}
             </h3>
 
             <p className="text-foreground-600">{devProfile.about.p1}</p>
