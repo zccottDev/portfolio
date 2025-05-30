@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { devProfile } from "../data/devProfile";
 
 export const Hero: React.FC = () => {
-
   return (
     <section id="home" className="min-h-screen flex items-center pt-16">
       <div className="section-container">
@@ -113,6 +112,7 @@ export const Hero: React.FC = () => {
           >
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-primary">
               <img
+                rel="preload"
                 src="assets/me1.jpg"
                 alt="Developer Portrait"
                 className="w-full h-full object-cover"
