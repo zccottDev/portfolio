@@ -24,14 +24,17 @@ export const Hero: React.FC = () => {
               {devProfile.greeting}
             </motion.span>
 
-            <motion.h1
+            <motion.div
               className="text-4xl sm:text-5xl lg:text-6xl font-bold"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              {devProfile.name} <span className="gradient-text">Developer</span>
-            </motion.h1>
+              <h1>
+                {devProfile.name}{" "}
+                <span className="gradient-text">Developer</span>
+              </h1>
+            </motion.div>
 
             <motion.h2
               className="text-2xl sm:text-3xl text-foreground-600 font-medium"
