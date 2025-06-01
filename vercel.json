@@ -1,0 +1,13 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Last-Modified",
+          "value": "Sun, 01 Jun 2025 12:00:00 GMT"
+        }
+      ]
+    }
+  ]
+}
