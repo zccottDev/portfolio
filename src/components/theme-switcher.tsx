@@ -31,6 +31,7 @@ export const ThemeSwitcher: React.FC = () => {
           isSelected={isDark}
           onValueChange={handleToggle}
           size="sm"
+          aria-label={`Toggle ${isDark ? "light" : "dark"} mode`}
           color="primary"
           className="mx-1"
         />
