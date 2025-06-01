@@ -36,7 +36,7 @@ export const About: React.FC = () => {
             <Card className="w-full max-w-md overflow-hidden">
               <CardBody className="p-0">
                 <img
-                  rel="preload"
+                  loading="lazy"
                   src={
                     theme === "dark" ? "assets/dark.jpg" : "assets/white.jpg"
                   }

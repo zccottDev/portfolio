@@ -141,6 +141,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <img
             src={project.image}
             alt={project.title}
+            loading="lazy"
             className="w-full h-48 object-cover"
           />
           <div className="project-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity flex items-center justify-center">
