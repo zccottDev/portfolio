@@ -36,14 +36,14 @@ export const Hero: React.FC = () => {
               </h1>
             </motion.div>
 
-            <motion.h2
+            <motion.div
               className="text-2xl sm:text-3xl text-foreground-600 font-medium"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              {devProfile.role}
-            </motion.h2>
+              <h2>{devProfile.role}</h2>
+            </motion.div>
 
             <motion.p
               className="text-foreground-500 max-w-md mt-2"
