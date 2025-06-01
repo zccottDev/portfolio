@@ -74,9 +74,9 @@ export const Navbar: React.FC = () => {
               className="flex items-center gap-2"
             >
               <Icon icon="lucide:code" className="text-primary text-2xl" />
-              <p className="font-bold text-inherit text-lg">
+              <h2 className="font-bold text-inherit text-lg">
                 Dev<span className="text-primary">Portfolio</span>
-              </p>
+              </h2>
             </motion.div>
           </NavbarBrand>
         </li>

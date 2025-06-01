@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
 Sitemap: https://zccott.vercel.app/sitemap.xml

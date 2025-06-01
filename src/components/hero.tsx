@@ -117,7 +117,7 @@ export const Hero: React.FC = () => {
               <img
                 rel="preload"
                 src="assets/me1.jpg"
-                alt="Developer Portrait"
+                alt="Rahul A P - Web Developer"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-transparent"></div>
