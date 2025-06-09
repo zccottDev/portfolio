@@ -3,6 +3,7 @@ import { Card, CardBody, Input, Textarea, Button, Link } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { devProfile } from "../data/devProfile";
+import { sendEmail } from '../utils/email';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = React.useState({
@@ -20,20 +21,30 @@ export const Contact: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    try {
+      await sendEmail(templateParams);
       setFormData({ name: "", email: "", subject: "", message: "" });
-      setIsSubmitting(false);
       alert("Thank you for your message! I will get back to you soon.");
-    }, 1500);
+    } catch (error) {
+      console.error("Email send failed:", error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const contactInfo = devProfile.about.info
+  const contactInfo = devProfile.about.info;
   return (
     <section id="contact" className="py-16 md:py-24">
       <div className="section-container">
@@ -66,26 +77,28 @@ export const Contact: React.FC = () => {
                 <h3 className="text-xl font-bold">Contact Information</h3>
 
                 <div className="flex flex-col gap-6">
-                  {contactInfo.filter(item => item.link).map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="p-3 bg-primary-500/10 rounded-medium">
-                        <Icon
-                          icon={item.icon}
-                          className="text-primary text-xl"
-                        />
+                  {contactInfo
+                    .filter((item) => item.link)
+                    .map((item, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <div className="p-3 bg-primary-500/10 rounded-medium">
+                          <Icon
+                            icon={item.icon}
+                            className="text-primary text-xl"
+                          />
+                        </div>
+                        <div>
+                          <h4 className="font-medium">{item.label}</h4>
+                          <Link
+                            href={item.link}
+                            isExternal
+                            className="text-foreground-500"
+                          >
+                            {item.value}
+                          </Link>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-medium">{item.label}</h4>
-                        <Link
-                          href={item.link}
-                          isExternal
-                          className="text-foreground-500"
-                        >
-                          {item.value}
-                        </Link>
-                      </div>
-                    </div>
-                  ))}
+                    ))}
                 </div>
 
                 <div className="mt-auto">

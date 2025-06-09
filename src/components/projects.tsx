@@ -18,16 +18,42 @@ export const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
+      title:
+        "Gemini-Powered AI Assistant with Image Understanding & Generation",
+      description: `This is a multi-functional AI assistant web app built using Streamlit, designed to interact with both Google's Gemini API and OpenAI's API. The app supports, Text-based Q&A using Gemini models.Image understanding, where users upload an image and ask questions about its content.Image generation, where users input a prompt and the app returns an AI-generated image. The user can select the desired mode from a sidebar, enter a prompt or upload an image, and receive intelligent responses or visuals powered by large language mo dels and diffusion models.`,
+      image: "assets/gemini.png",
+      tags: [" Python", "Streamlit", "Gemini", "OpenAI API", "Gen AI"],
+      demoUrl: `${devProfile.socialLinks[0].href}//Gemini`,
+      codeUrl: `${devProfile.socialLinks[0].href}//Gemini`,
+    },
+    {
+      id: 2,
+      title: "Gemini-Powered Webpage Summarizer",
+      description:
+        "Built a simple AI tool using Streamlit, BeautifulSoup, and Google’s Gemini API (Gemma 3 12B) that allows users to enter any URL, scrape the content from the webpage, and instantly receive a summarized version of the text. Great for quick insights from lengthy articles, blogs, or research papers.",
+      image: "assets/webpageSummarizer.png",
+      tags: [
+        "Python",
+        "Artificial Intelligence (AI)",
+        "Web Scraping",
+        "Gemini",
+        "Streamlit",
+      ],
+      demoUrl: `${devProfile.socialLinks[0].href}/WebPageAiSummarizer`,
+      codeUrl: `${devProfile.socialLinks[0].href}/WebPageAiSummarizer`,
+    },
+    {
+      id: 3,
       title: "Streamify",
       description:
         "A social app for making friends, learning languages, and communicating via chat, video calls, and screen sharing, built with Stream Chat.",
-      image: "assets/streamify.png",
+      image: "assets/webpageSummarizer.png",
       tags: ["React", "Express", "Tailwind CSS", "Stream Chat", "MongoDB"],
       demoUrl: `${devProfile.socialLinks[0].href}/streamify`,
       codeUrl: `${devProfile.socialLinks[0].href}/streamify`,
     },
     {
-      id: 2,
+      id: 4,
       title: "PasskeyLogin",
       description:
         "A secure Angular application featuring fingerprint-based authentication and a Material-UI interface.",
@@ -37,7 +63,7 @@ export const Projects: React.FC = () => {
       codeUrl: `${devProfile.socialLinks[0].href}/passkeyLogin`,
     },
     {
-      id: 3,
+      id: 5,
       title: "EmployeeManagement",
       description:
         "An Angular 19 application for managing employee data with a modern TypeScript-based architecture.",
@@ -47,11 +73,11 @@ export const Projects: React.FC = () => {
       codeUrl: `${devProfile.socialLinks[0].href}/EmployeeManagementAngular19`,
     },
     {
-      id: 4,
+      id: 6,
       title: "ExpenseTracker",
       description:
         "A front-end React application for tracking daily expenses with basic CRUD operations.",
-      image: "assets/expenseTracker.png", 
+      image: "assets/expenseTracker.png",
       tags: ["TypeScript", "React", "Vite", "Lovable"],
       demoUrl: "https://zccottexpensetracker.vercel.app/",
       codeUrl: `${devProfile.socialLinks[0].href}/ExpenseTracker`,
