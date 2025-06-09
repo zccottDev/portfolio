@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, Input, Textarea, Button, Link } from "@heroui/react";
+import { Card, CardBody, Input, Textarea, Button, Link, addToast} from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { devProfile } from "../data/devProfile";
@@ -35,10 +35,18 @@ export const Contact: React.FC = () => {
     try {
       await sendEmail(templateParams);
       setFormData({ name: "", email: "", subject: "", message: "" });
-      alert("Thank you for your message! I will get back to you soon.");
+      addToast({
+              title: "Email sent successfully",
+              description: "Thank you for your message! I will get back to you soon.",
+              color: "success",
+            })
     } catch (error) {
       console.error("Email send failed:", error);
-      alert("Something went wrong. Please try again later.");
+      addToast({
+              title: "Email send failed",
+              description: "Something went wrong. Please try again later.",
+              color: "danger",
+            })
     } finally {
       setIsSubmitting(false);
     }
