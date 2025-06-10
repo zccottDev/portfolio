@@ -47,7 +47,7 @@ export const Projects: React.FC = () => {
       title: "Streamify",
       description:
         "A social app for making friends, learning languages, and communicating via chat, video calls, and screen sharing, built with Stream Chat.",
-      image: "assets/webpageSummarizer.png",
+      image: "assets/streamify.png",
       tags: ["React", "Express", "Tailwind CSS", "Stream Chat", "MongoDB"],
       demoUrl: `${devProfile.socialLinks[0].href}/streamify`,
       codeUrl: `${devProfile.socialLinks[0].href}/streamify`,
