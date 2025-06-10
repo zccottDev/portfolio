@@ -23,8 +23,8 @@ export const Projects: React.FC = () => {
       description: `This is a multi-functional AI assistant web app built using Streamlit, designed to interact with both Google's Gemini API and OpenAI's API. The app supports, Text-based Q&A using Gemini models.Image understanding, where users upload an image and ask questions about its content.Image generation, where users input a prompt and the app returns an AI-generated image. The user can select the desired mode from a sidebar, enter a prompt or upload an image, and receive intelligent responses or visuals powered by large language mo dels and diffusion models.`,
       image: "assets/gemini.png",
       tags: [" Python", "Streamlit", "Gemini", "OpenAI API", "Gen AI"],
-      demoUrl: `${devProfile.socialLinks[0].href}//Gemini`,
-      codeUrl: `${devProfile.socialLinks[0].href}//Gemini`,
+      demoUrl: `${devProfile.socialLinks[0].href}/Gemini`,
+      codeUrl: `${devProfile.socialLinks[0].href}/Gemini`,
     },
     {
       id: 2,
