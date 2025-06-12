@@ -47,7 +47,7 @@ export const Projects: React.FC = () => {
       title: "Streamify",
       description:
         "A social app for making friends, learning languages, and communicating via chat, video calls, and screen sharing, built with Stream Chat.",
-      image: "assets/webpageSummarizer.png",
+      image: "assets/streamify.png",
       tags: ["React", "Express", "Tailwind CSS", "Stream Chat", "MongoDB"],
       demoUrl: `${devProfile.socialLinks[0].href}/streamify`,
       codeUrl: `${devProfile.socialLinks[0].href}/streamify`,
@@ -64,6 +64,16 @@ export const Projects: React.FC = () => {
     },
     {
       id: 5,
+      title: "Temporal PDF Processor with Gemini Summarization",
+      description:
+        "I designed a Temporal workflow that continuously processes PDF files. I used PyPDF2 to extract text from the PDFs within Temporal activities and connected the Google Gemini API to summarize large amounts of text efficiently. The system takes advantage of Temporal’s workflow and activity architecture to manage tasks reliably and at scale.I worked extensively with asynchronous processing and built a solution that is both fault-tolerant and capable of handling real-time PDF extraction and summarization. This project gave me valuable hands-on experience with building distributed applications using Temporal, while ensuring clean separation between the text extraction and AI-driven summarization processes.",
+      image: "assets/temporalpdfGemini.png",
+      tags: ["Temporal.io", "PyPDF2", "Google Gemini API"],
+      demoUrl: `${devProfile.socialLinks[0].href}/TemporalGeminiWorkflow`,
+      codeUrl: `${devProfile.socialLinks[0].href}/TemporalGeminiWorkflow`,
+    },
+    {
+      id: 6,
       title: "EmployeeManagement",
       description:
         "An Angular 19 application for managing employee data with a modern TypeScript-based architecture.",
@@ -73,7 +83,17 @@ export const Projects: React.FC = () => {
       codeUrl: `${devProfile.socialLinks[0].href}/EmployeeManagementAngular19`,
     },
     {
-      id: 6,
+      id: 7,
+      title: "Gemini PDF Resume Analyze",
+      description:
+        "I built the Gemini PDF Resume Analyzer, an intelligent Streamlit-based application that leverages Google’s Gemini 1.5 models to extract and summarize resume content in a structured, human-like narrative.",
+      image: "assets/webpageSummarizer.png",
+      tags: ["python", "streamlit","Google Gemini API", "PyPDF2", "Prompt Engineering"],
+      demoUrl: `${devProfile.socialLinks[0].href}/ResumeParserAI`,
+      codeUrl: `${devProfile.socialLinks[0].href}/ResumeParserAI`,
+    },
+    {
+      id: 8,
       title: "ExpenseTracker",
       description:
         "A front-end React application for tracking daily expenses with basic CRUD operations.",
