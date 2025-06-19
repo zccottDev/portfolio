@@ -116,7 +116,7 @@ export const Hero: React.FC = () => {
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-primary">
               <img
                 rel="preload"
-                src="assets/me1.jpg"
+                src="assets/me.jpeg"
                 alt="Rahul A P - Web Developer"
                 className="w-full h-full object-cover"
               />
