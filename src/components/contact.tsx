@@ -54,7 +54,7 @@ export const Contact: React.FC = () => {
 
   const contactInfo = devProfile.about.info;
   return (
-    <section id="contact" className="py-16 md:py-24">
+    <section id="contact" className="py-16 md:py-24 bg-content2/50">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

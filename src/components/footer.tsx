@@ -10,13 +10,14 @@ export const Footer: React.FC = () => {
   const footerLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Journey", href: "#experience" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
 
   return (
-    <footer className="bg-content3/50 py-12">
+    <footer className="py-12">
       <div className="section-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <motion.div

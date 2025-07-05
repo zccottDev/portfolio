@@ -120,7 +120,7 @@ export const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="py-16 md:py-24 bg-content2/50">
+    <section id="projects" className="py-16 md:py-24">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
