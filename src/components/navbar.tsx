@@ -21,6 +21,7 @@ export const Navbar: React.FC = () => {
   const menuItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Journey", href: "#experience" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
