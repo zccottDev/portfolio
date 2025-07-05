@@ -1,9 +1,8 @@
 export const devProfile = {
   greeting: "Hello, I'm",
   name: "Rahul",
-  role: "Frontend Developer",
-  description: `I build exceptional and accessible digital experiences for the web. 
-    Passionate about creating beautiful, functional, and user-friendly interfaces.`,
+  role: "Full-Stack Developer | GenAI Integration",
+  description: `I love building for the web — designing accessible interfaces, developing robust backend systems, and integrating AI to create smart, user-focused applications.`,
   socialLinks: [
     {
       href: "https://github.com/zccott",
@@ -37,9 +36,9 @@ export const devProfile = {
     },
   ],
   about: {
-    head: "Frontend Developer & AI Enthusiast",
-    p1: `I’m a passionate frontend developer with over a year of experience crafting responsive and user-friendly web applications. I specialize in Angular, React, TypeScript, and modern CSS frameworks.`,
-    p2: `My journey in web development began with a curiosity for creating engaging digital experiences. Since then, I’ve been dedicated to building high-quality, user-centric web solutions that make an impact.`,
+    head: "Full-Stack Developer & AI Enthusiast",
+    p1: `I’m a passionate software engineer with over a year of experience building responsive, accessible, and user-friendly web applications. I specialize in Angular, React, TypeScript, and modern CSS frameworks, and I also work with backend technologies like FastAPI and Python, along with GenAI integration.`,
+    p2: `My journey in web development began with a curiosity for creating engaging digital experiences. Over time, I’ve expanded into full-stack and AI-powered solutions — staying committed to delivering high-quality, user-centric products that solve real-world problems.`,
     info: [
       {
         label: "Location",

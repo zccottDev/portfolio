@@ -30,12 +30,12 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-2">
               <Icon icon="lucide:code" className="text-primary text-2xl" />
               <p className="font-bold text-inherit text-lg">
-                Dev<span className="text-primary">Portfolio</span>
+                zccott <span className="text-primary">Portfolio</span>
               </p>
             </div>
 
             <p className="text-foreground-500">
-              Building beautiful, responsive, and user-friendly web experiences.
+              Building web experiences that look great, feel smooth, and work everywhere.
             </p>
 
             <div className="flex gap-4 mt-2">
