@@ -3,45 +3,52 @@ import { Card, CardBody, Link, Chip, Button } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 
-interface Experience {
-  company: string;
-  position: string;
+interface Position {
+  title: string;
   startDate: string;
   endDate: string | null;
-  website: string;
   achievements: string[];
+}
+
+interface Experience {
+  company: string;
+  website: string;
+  positions: Position[];
 }
 
 const experiences: Experience[] = [
   {
     company: "AOT Technologies",
-    position: "Junior Software Engineer",
-    startDate: "Jun 2024",
-    endDate: null,
     website: "https://www.aot-technologies.com/",
-    achievements: [
-      "Developed browser extension automation workflows using Puppeteer",
-      "Worked on front-end development for platforms like Quipo and Quipo Lite",
-      "Built responsive UI components using Angular and TypeScript",
-      "Developed backend services using FastAPI and Python",
-      "Integrated Generative AI APIs and optimized prompt usage",
-      "Collaborated with teams to deliver production-ready features in an Agile environment",
-      "Refactored legacy code for better maintainability and performance",
-      "Performed cross-browser testing and fixed compatibility issues",
-      "Created documentation for workflows, scripts, and onboarding processes",
+    positions: [
+      {
+        title: "Junior Software Engineer",
+        startDate: "Jun 2024",
+        endDate: null,
+        achievements: [
+          "Developed responsive UI components using Angular and TypeScript, and implemented automation workflows with Puppeteer",
+          "Built backend services with FastAPI and Python, integrating Generative AI APIs for intelligent features",
+          "Collaborated with cross-functional teams in an Agile environment to deliver production-ready features",
+          "Created documentation for workflows, automation scripts, and onboarding processes",
+        ],
+      },
     ],
   },
   {
     company: "Nexus Technologies",
-    position: "Software Engineering Intern",
-    startDate: "Sep 2023",
-    endDate: "Feb 2024",
     website: "https://www.linkedin.com/company/the-nexus-technologies/",
-    achievements: [
-      "Designed the layout for an AI-powered symptom checker app",
-      "Curated training datasets for symptom classification",
-      "Collaborated with team members to improve AI model precision",
-      "Contributed to architecture planning and MVP documentation",
+    positions: [
+      {
+        title: "Software Engineering Intern",
+        startDate: "Sep 2023",
+        endDate: "Feb 2024",
+        achievements: [
+          "Designed the layout for an AI-powered symptom checker app",
+          "Curated training datasets for symptom classification",
+          "Collaborated with team members to improve AI model precision",
+          "Contributed to architecture planning and MVP documentation",
+        ],
+      },
     ],
   },
 ];
@@ -58,134 +65,93 @@ export const Experience: React.FC = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Work <span className="gradient-text">Experience</span>
+            Professional <span className="gradient-text">Journey</span>
           </h2>
           <p className="text-foreground-500 max-w-2xl mx-auto">
-            A look into my roles, responsibilities, and milestones.
+            Explore my career path and key achievements over the years.
           </p>
         </motion.div>
 
         <div className="relative">
           {/* Animated vertical line */}
           <motion.div
-            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-primary-500/20"
-            initial={{ height: 0 }}
-            whileInView={{ height: "100%" }}
+            className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-primary/20"
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            style={{ originY: 0 }}
           />
 
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`mb-12 flex ${
-                index % 2 === 0 ? "flex-row-reverse" : "flex-row"
-              }`}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="mb-12 md:mb-24 relative"
             >
-              <div className="w-1/2 px-4">
-                <Card className="shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                  <CardBody className="p-6">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.2 }}
-                      className="flex flex-col mb-4"
-                    >
+              <div
+                className={`flex flex-col md:flex-row items-center ${
+                  index % 2 === 0 ? "md:flex-row-reverse" : ""
+                }`}
+              >
+                <div className="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+                  <Card className="experience-card hover:shadow-lg transition-shadow duration-300">
+                    <CardBody className="p-6">
                       <Link
                         href={exp.website}
                         isExternal
-                        className="text-xl font-bold hover:text-primary transition-colors"
+                        className="text-xl font-bold hover:text-primary transition-colors flex items-center gap-2 mb-2"
                       >
                         {exp.company}
+                        <Icon icon="lucide:external-link" className="text-sm" />
                       </Link>
-                      <h4 className="text-lg text-foreground-600">
-                        {exp.position}
-                      </h4>
-                      <div className="flex items-center gap-2 text-foreground-500 mt-2">
-                        <Icon icon="lucide:calendar" />
-                        <span>
-                          {exp.startDate} - {exp.endDate || "Present"}
-                        </span>
-                        {!exp.endDate && (
-                          <Chip color="primary" variant="flat" size="sm">
-                            Current
-                          </Chip>
-                        )}
-                      </div>
-                    </motion.div>
-                    <motion.ul
-                      className="space-y-2 text-foreground-600"
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true }}
-                      variants={{
-                        visible: {
-                          transition: {
-                            staggerChildren: 0.1,
-                          },
-                        },
-                      }}
-                    >
-                      {exp.achievements.map((achievement, i) => (
-                        <motion.li
-                          key={i}
-                          variants={{
-                            hidden: { opacity: 0, x: -20 },
-                            visible: { opacity: 1, x: 0 },
-                          }}
-                          className="flex items-start"
-                        >
-                          <Icon
-                            icon="lucide:check-circle"
-                            className="text-primary mt-1 mr-2 flex-shrink-0"
-                          />
-                          <span>{achievement}</span>
-                        </motion.li>
+                      {exp.positions.map((position, posIndex) => (
+                        <div key={posIndex} className="mb-4 last:mb-0">
+                          <h4 className="text-lg font-semibold">
+                            {position.title}
+                          </h4>
+                          <p className="text-sm text-foreground-500 flex items-center gap-2">
+                            <Icon
+                              icon="lucide:calendar"
+                              className="text-primary"
+                            />
+                            {position.startDate} -{" "}
+                            {position.endDate || "Present"}
+                            {!position.endDate && (
+                              <Chip color="success" variant="flat" size="sm">
+                                Current
+                              </Chip>
+                            )}
+                          </p>
+                          <ul className="mt-2 space-y-1">
+                            {position.achievements.map((achievement, i) => (
+                              <li key={i} className="flex items-start">
+                                <Icon
+                                  icon="lucide:check-circle"
+                                  className="text-primary mt-1 mr-2 flex-shrink-0"
+                                />
+                                <span className="text-sm">{achievement}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       ))}
-                    </motion.ul>
-                  </CardBody>
-                </Card>
-              </div>
-              <div className="w-1/2 flex justify-center items-center relative">
-                <motion.div
-                  className="w-8 h-8 bg-primary rounded-full z-10 flex items-center justify-center"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                >
+                    </CardBody>
+                  </Card>
+                </div>
+                <div className="w-8 h-8 bg-primary rounded-full z-10 flex items-center justify-center absolute left-0 md:left-1/2 transform md:-translate-x-1/2">
                   <Icon
                     icon="lucide:briefcase"
                     className="text-white text-sm"
                   />
-                </motion.div>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-12"
-        >
-          <Button
-            as={Link}
-            href="#contact"
-            color="primary"
-            size="lg"
-            endContent={<Icon icon="lucide:arrow-right" />}
-          >
-            Let's Work Together
-          </Button>
-        </motion.div>
       </div>
     </section>
   );
