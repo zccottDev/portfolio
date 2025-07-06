@@ -8,6 +8,12 @@ export default {
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      sm: '800px',       // 👈 custom breakpoint starts here
+      md: '1024px',
+      lg: '1280px',
+      xl: '1536px',
+    },
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
@@ -18,8 +24,8 @@ export default {
   plugins: [
     heroui({
       layout: {
-        dividerWeight: "1px", 
-        disabledOpacity: 0.45, 
+        dividerWeight: "1px",
+        disabledOpacity: 0.45,
         fontSize: {
           tiny: "0.75rem",   // 12px
           small: "0.875rem", // 14px
@@ -27,20 +33,20 @@ export default {
           large: "1.125rem", // 18px
         },
         lineHeight: {
-          tiny: "1rem", 
-          small: "1.25rem", 
-          medium: "1.5rem", 
-          large: "1.75rem", 
+          tiny: "1rem",
+          small: "1.25rem",
+          medium: "1.5rem",
+          large: "1.75rem",
         },
         radius: {
-          small: "6px", 
-          medium: "8px", 
-          large: "12px", 
+          small: "6px",
+          medium: "8px",
+          large: "12px",
         },
         borderWidth: {
-          small: "1px", 
-          medium: "1px", 
-          large: "2px", 
+          small: "1px",
+          medium: "1px",
+          large: "2px",
         },
       },
       themes: {
