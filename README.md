@@ -174,6 +174,7 @@ While this is a personal portfolio, feedback and suggestions are welcome:
 - **Email**: zzccott@gmail.com
 - **Twitter**: [@zccott](https://x.com/zccott)
 
+
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
