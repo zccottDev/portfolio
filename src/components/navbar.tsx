@@ -60,27 +60,23 @@ export const Navbar: React.FC = () => {
       maxWidth="xl"
     >
       <NavbarContent>
-        <li>
-          <NavbarMenuToggle
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className="sm:hidden"
-          />
-        </li>
-        <li>
-          <NavbarBrand>
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="flex items-center gap-2"
-            >
-              <Icon icon="lucide:code" className="text-primary text-2xl" />
-              <h2 className="font-bold text-inherit text-lg">
-                zcco<span className="text-primary">tt</span>
-              </h2>
-            </motion.div>
-          </NavbarBrand>
-        </li>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+        <NavbarBrand>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center gap-2"
+          >
+            <Icon icon="lucide:code" className="text-primary text-2xl" />
+            <h2 className="font-bold text-inherit text-lg">
+              zcco<span className="text-primary">tt</span>
+            </h2>
+          </motion.div>
+        </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
