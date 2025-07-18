@@ -1,6 +1,6 @@
 export const devProfile = {
   greeting: "Hello, I'm",
-  name: "Rahul",
+  name: "zccott",
   role: "Full-Stack Developer | GenAI Integration",
   description: `I love building for the web — designing accessible interfaces, developing robust backend systems, and integrating AI to create smart, user-focused applications.`,
   socialLinks: [
