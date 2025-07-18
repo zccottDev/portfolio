@@ -73,7 +73,7 @@ export const Navbar: React.FC = () => {
           >
             <Icon icon="lucide:code" className="text-primary text-2xl" />
             <h2 className="font-bold text-inherit text-lg">
-              zcco<span className="text-primary">tt</span>
+              Rahul A P <span className="text-primary">(zccott)</span>
             </h2>
           </motion.div>
         </NavbarBrand>

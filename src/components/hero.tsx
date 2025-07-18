@@ -30,10 +30,10 @@ export const Hero: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              <h1>
+              <h2>
                 {devProfile.name}{" "}
                 <span className="gradient-text">Developer</span>
-              </h1>
+              </h2>
             </motion.div>
 
             <motion.div
@@ -42,7 +42,7 @@ export const Hero: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              <h2>{devProfile.role}</h2>
+              <h1>{devProfile.role}</h1>
             </motion.div>
 
             <motion.p
