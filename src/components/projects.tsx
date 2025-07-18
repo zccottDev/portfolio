@@ -18,91 +18,59 @@ export const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title:
-        "Gemini-Powered AI Assistant with Image Understanding & Generation",
-      description: `This is a multi-functional AI assistant web app built using Streamlit, designed to interact with both Google's Gemini API and OpenAI's API. The app supports, Text-based Q&A using Gemini models.Image understanding, where users upload an image and ask questions about its content.Image generation, where users input a prompt and the app returns an AI-generated image. The user can select the desired mode from a sidebar, enter a prompt or upload an image, and receive intelligent responses or visuals powered by large language mo dels and diffusion models.`,
+      title: "Gemini-Powered AI Assistant with Image Understanding & Generation",
+      description: `A multi-functional AI assistant web app built with Streamlit that integrates Google's Gemini and OpenAI's APIs. The app features three modes: text-based Q&A, image understanding for analyzing uploaded images, and AI image generation from text prompts. This project demonstrates how different AI capabilities can be combined into a seamless, interactive user experience.`,
       image: "assets/gemini.png",
-      tags: [" Python", "Streamlit", "Gemini", "OpenAI API", "Gen AI"],
+      tags: ["Python", "Streamlit", "Gemini API", "OpenAI API", "Generative AI"],
       demoUrl: `${devProfile.socialLinks[0].href}/Gemini`,
       codeUrl: `${devProfile.socialLinks[0].href}/Gemini`,
     },
     {
       id: 2,
+      title: "AI-Powered Symptom Checker & Clinic Locator",
+      description: "Built EasyDiagno, a smart mobile app using Flutter that provides users with potential health insights based on their symptoms. It features an ML-powered chatbot (Python, Scikit-learn) for diagnosis suggestions and an integrated locator for nearby clinics. Includes a full admin panel for medical institutions and uses Firebase for backend services.",
+      image: "assets/easydiagno.png",
+      tags: ["Flutter", "Python", "Firebase", "Machine Learning", "Scikit-learn", "Mobile App"],
+      demoUrl: `${devProfile.socialLinks[0].href}/EasyDiagno`,
+      codeUrl: `${devProfile.socialLinks[0].href}/EasyDiagno`, 
+    },
+    {
+      id: 3,
       title: "Gemini-Powered Webpage Summarizer",
-      description:
-        "Built a simple AI tool using Streamlit, BeautifulSoup, and Google’s Gemini API (Gemma 3 12B) that allows users to enter any URL, scrape the content from the webpage, and instantly receive a summarized version of the text. Great for quick insights from lengthy articles, blogs, or research papers.",
+      description: "A lightweight AI summarization tool built with Streamlit and BeautifulSoup. Users can input any URL, and the application scrapes the webpage content, using the Gemini API to provide an instant, AI-generated summary. Ideal for quickly understanding long articles, blogs, or research papers.",
       image: "assets/webpageSummarizer.png",
-      tags: [
-        "Python",
-        "Artificial Intelligence (AI)",
-        "Web Scraping",
-        "Gemini",
-        "Streamlit",
-      ],
+      tags: ["Python", "Streamlit", "BeautifulSoup", "Gemini API", "Web Scraping"],
       demoUrl: `${devProfile.socialLinks[0].href}/WebPageAiSummarizer`,
       codeUrl: `${devProfile.socialLinks[0].href}/WebPageAiSummarizer`,
     },
     {
-      id: 3,
+      id: 4,
+      title: "Gemini PDF Resume Analyzer",
+      description: "An intelligent web application built with Streamlit and Google’s Gemini 1.5 Pro model. The tool allows users to upload a PDF resume, which is then parsed and analyzed to generate a structured, human-like narrative summary. Especially useful for HR and recruitment workflows.",
+      image: "assets/GeminiPDFResumeAnalyzer.png",
+      tags: ["Python", "Streamlit", "Google Gemini API", "PyPDF2", "Prompt Engineering"],
+      demoUrl: `${devProfile.socialLinks[0].href}/ResumeParserAI`,
+      codeUrl: `${devProfile.socialLinks[0].href}/ResumeParserAI`,
+    },
+    {
+      id: 5,
+      title: "Employee Management System",
+      description: "A responsive Employee Management System built with Angular 19 and Bootstrap 5. The project focuses on modern web development best practices, including a scalable UI, clean code, and efficient CRUD operations via external APIs. Served as a practical foundation for mastering advanced Angular techniques.",
+      image: "assets/employee.png",
+      tags: ["Angular", "TypeScript", "Bootstrap", "RESTful APIs"],
+      demoUrl: `${devProfile.socialLinks[0].href}/EmployeeManagementAngular19`,
+      codeUrl: `${devProfile.socialLinks[0].href}/EmployeeManagementAngular19`,
+    },
+    {
+      id: 6,
       title: "Streamify",
-      description:
-        "A social app for making friends, learning languages, and communicating via chat, video calls, and screen sharing, built with Stream Chat.",
+      description: "A social app for making friends, learning languages, and communicating via chat, video calls, and screen sharing, built with Stream Chat.",
       image: "assets/streamify.png",
       tags: ["React", "Express", "Tailwind CSS", "Stream Chat", "MongoDB"],
       demoUrl: `${devProfile.socialLinks[0].href}/streamify`,
       codeUrl: `${devProfile.socialLinks[0].href}/streamify`,
     },
-    {
-      id: 4,
-      title: "PasskeyLogin",
-      description:
-        "A secure Angular application featuring fingerprint-based authentication and a Material-UI interface.",
-      image: "assets/passkey.png",
-      tags: ["Angular", "Express", "MongoDB", "Material-UI"],
-      demoUrl: "https://passkey-login-flame.vercel.app/login",
-      codeUrl: `${devProfile.socialLinks[0].href}/passkeyLogin`,
-    },
-    {
-      id: 5,
-      title: "Temporal PDF Processor with Gemini Summarization",
-      description:
-        "I designed a Temporal workflow that continuously processes PDF files. I used PyPDF2 to extract text from the PDFs within Temporal activities and connected the Google Gemini API to summarize large amounts of text efficiently. The system takes advantage of Temporal’s workflow and activity architecture to manage tasks reliably and at scale.I worked extensively with asynchronous processing and built a solution that is both fault-tolerant and capable of handling real-time PDF extraction and summarization. This project gave me valuable hands-on experience with building distributed applications using Temporal, while ensuring clean separation between the text extraction and AI-driven summarization processes.",
-      image: "assets/temporalpdfGemini.png",
-      tags: ["Temporal.io", "PyPDF2", "Google Gemini API"],
-      demoUrl: `${devProfile.socialLinks[0].href}/TemporalGeminiWorkflow`,
-      codeUrl: `${devProfile.socialLinks[0].href}/TemporalGeminiWorkflow`,
-    },
-    {
-      id: 6,
-      title: "EmployeeManagement",
-      description:
-        "An Angular 19 application for managing employee data with a modern TypeScript-based architecture.",
-      image: "assets/employee.png",
-      tags: ["Angular 19", "TypeScript", "GerasimAPI"],
-      demoUrl: `${devProfile.socialLinks[0].href}/EmployeeManagementAngular19`,
-      codeUrl: `${devProfile.socialLinks[0].href}/EmployeeManagementAngular19`,
-    },
-    {
-      id: 7,
-      title: "Gemini PDF Resume Analyze",
-      description:
-        "I built the Gemini PDF Resume Analyzer, an intelligent Streamlit-based application that leverages Google’s Gemini 1.5 models to extract and summarize resume content in a structured, human-like narrative.",
-      image: "assets/webpageSummarizer.png",
-      tags: ["python", "streamlit","Google Gemini API", "PyPDF2", "Prompt Engineering"],
-      demoUrl: `${devProfile.socialLinks[0].href}/ResumeParserAI`,
-      codeUrl: `${devProfile.socialLinks[0].href}/ResumeParserAI`,
-    },
-    {
-      id: 8,
-      title: "ExpenseTracker",
-      description:
-        "A front-end React application for tracking daily expenses with basic CRUD operations.",
-      image: "assets/expenseTracker.png",
-      tags: ["TypeScript", "React", "Vite", "Lovable"],
-      demoUrl: "https://zccottexpensetracker.vercel.app/",
-      codeUrl: `${devProfile.socialLinks[0].href}/ExpenseTracker`,
-    },
-  ];
+];
 
   const container = {
     hidden: { opacity: 0 },
